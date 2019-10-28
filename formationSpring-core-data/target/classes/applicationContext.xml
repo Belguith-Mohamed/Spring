@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+	<tx:annotation-driven />
+	<context:component-scan base-package="com.threetee.formationSpring" />
+	<bean class="com.threetee.formationSpring.model.entity.Address">
+		<property name="city" value="Tunis"></property>
+		<property name="road" value="Paris"></property>
+		<property name="postalCode" value="1001"></property>
+		<property name="id" value="1"></property>
+
+	</bean>
+	<bean class="com.threetee.formationSpring.model.entity.Address"
+		primary="true">
+		<property name="city" value="Tunis"></property>
+		<property name="road" value="Rome"></property>
+		<property name="postalCode" value="1010"></property>
+		<property name="id" value="1"></property>
+
+	</bean>
+
+	<bean id="add0" class="com.threetee.formationSpring.model.entity.Address">
+		<property name="city" value="BenArous"></property>
+		<property name="road" value="France"></property>
+		<property name="postalCode" value="2001"></property>
+		<property name="id" value="2"></property>
+
+	</bean>
+
+	<bean id="anotherDate" class="java.time.LocalDate" factory-method="of">
+		<constructor-arg index="0" value="2000" />
+		<constructor-arg index="1" value="05" />
+		<constructor-arg index="2" value="05" />
+	</bean>
+
+	<bean id="currentDate" class="java.time.LocalDateTime"
+		factory-method="now" scope="prototype" />
+
+	<bean class="com.threetee.formationSpring.model.entity.Client"
+		p:id="10" p:address-ref="add0" init-method="init">
+		<property name="firstName" value="Mohamed"></property>
+		<property name="lastName" value="Ben Salah"></property>
+		<!-- <property name="address" > -->
+		<!-- <ref bean="com.threetee.formationSpring.model.entity.Address#0"/> -->
+		<!-- </property> -->
+		<property name="birthDate">
+			<bean class="java.util.Date" />
+		</property>
+	</bean>
+
+	<!-- <bean class="com.threetee.formationSpring.model.entity.Client" -->
+	<!-- p:id="10"> -->
+	<!-- <property name="firstName" value="Mohamed"></property> -->
+	<!-- <property name="lastName" value="Ben Salah"></property> -->
+	<!-- <property name="address" ref="add1"></property> -->
+	<!-- <property name="birthDate"> -->
+	<!-- <bean class="java.util.Date" /> -->
+	<!-- </property> -->
+	<!-- </bean> -->
+
+	<!-- <bean class="com.threetee.formationSpring.model.entity.Client" -->
+	<!-- p:id="10" primary="true"> -->
+	<!-- <property name="firstName" value="ALI"></property> -->
+	<!-- <property name="lastName" value="Ben MED"></property> -->
+	<!-- <property name="address" ref="add1"></property> -->
+	<!-- <property name="birthDate"> -->
+	<!-- <bean class="java.util.Date"> -->
+
+	<!-- </bean> -->
+	<!-- </property> -->
+	<!-- </bean> -->
+	<util:list id="mmllF">
+		<array value-type="int">
+			<value>12</value>
+			<value>12</value>
+		</array>
+	</util:list>
+
+
+</beans>

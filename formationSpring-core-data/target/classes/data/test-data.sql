@@ -1,0 +1,4 @@
+INSERT INTO P_USER(ID, USERNAME, PASSWORD, EMAIL ,STATUS) VALUES (1, 'Zouhour', 'Tmar', 'zou@3t.com','ACTIVE');
+INSERT INTO P_USER(ID, USERNAME, PASSWORD, EMAIL ,STATUS) VALUES (2, 'Farhat', 'Bouchnag', 'Farhat@3t.com','ACTIVE');
+INSERT INTO P_USER(ID, USERNAME, PASSWORD, EMAIL ,STATUS) VALUES (3, 'Mohamed', 'Belguith', 'Mohamed@3t.com','ACTIVE');
+INSERT INTO P_USER(ID, USERNAME, PASSWORD, EMAIL ,STATUS) VALUES (4, 'Montacer', 'chaabani', 'Montacer@3t.com','ACTIVE');
