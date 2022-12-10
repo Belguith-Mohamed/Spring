@@ -14,7 +14,7 @@
 	<url>http://www.example.com</url>
 
 	<properties>
-		<org.springframework-version>4.3.8.RELEASE</org.springframework-version>
+		<org.springframework-version>6.0.0</org.springframework-version>
 		<org.hibernate-em-version>4.3.8.Final</org.hibernate-em-version>
 		<org.springframework.data-version>1.9.0.RELEASE</org.springframework.data-version>
 		<dbcp-version>1.4</dbcp-version>
